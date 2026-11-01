@@ -19,10 +19,13 @@ maki.api.register_command({
         end
       end
     end
-    assert(maki.fs.write(
-      'session.md',
-      table.concat(output, '\n\n')
-    ))
-    maki.notify('exported to session.md')
+    maki.fn.jobstart(
+      {
+        'wl-copy', '--', table.concat(output, '\n\n')
+      }, {
+        scope = 'plugin',
+      }
+    )
+    maki.notify('copied to clipboard')
   end,
 })
