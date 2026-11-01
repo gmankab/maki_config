@@ -1,3 +1,4 @@
+-- copies session to clipboard in markdown format
 maki.api.register_command({
   name = 'export',
   handler = function()
