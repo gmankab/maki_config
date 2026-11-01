@@ -1,1 +1,2 @@
 require('theme')
+require('keybinds')
