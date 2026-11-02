@@ -1,3 +1,3 @@
-require('theme')
+require('setup')
 require('export')
 require('vim-mode')
